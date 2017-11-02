@@ -1,9 +1,33 @@
-firstNamber=input("введіть перше ціле число")
-secondNamber=input("введіть друге ціле число")
-a=(int(firstNamber))
-b=(int(secondNamber))
+a = []
+n = int(input("введіть кількість учнів"))
+for i in range(n):
 
-if a<b:
-    print("більше число: ",b)
-else:
-    print("більше чісло: ",a)
+   while 1:
+       c=int(input('введіть зріcт учня'))
+
+       if c>200:
+         print('введіть зріст < 200')
+       else:
+           a.append(c)
+           break
+
+
+a.sort()
+a.reverse()
+print(a)
+h = int(input("введіть зріст нового учня"))
+N=n
+for j in range(n):
+    if h>a[j]:
+        N=j+1
+        break
+print(N)
+
+
+
+
+
+
+
+
+

@@ -1,14 +1,16 @@
+a = []
+n = int(input("введіть кількість елементів"))
+for i in range(n):
+    a.append(int(input('введіть число')))
+b = []
+for j in range(n):
 
-x=(float(input("введіть дійсне число 'x'")))
+    d=a.count(a[j])
+    b.append(d)
+m=0
+for k in range(n):
 
+    if b[k] == 2:
+        m=m+1
+print("кількість пар з однаковими елементами:",m/2)
 
-
-
-
-
-if x > 0:
-    print("sign(x)=", 1)
-elif x < 0:
-    print("sign(x)=", -1)
-else:
-    print("sign(x)=", 0)

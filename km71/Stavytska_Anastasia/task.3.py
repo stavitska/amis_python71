@@ -1,12 +1,17 @@
-firstNamber=input("введіть перше ціле число")
-secondNamber=input("введіть друге ціле число")
-thirdNamber=input('введіть третє ціле число')
-a=(int(firstNamber))
-b=(int(secondNamber))
-c=(int(thirdNamber))
-if a<b and a<c :
-    print("найменше число:", a)
-elif b<a and b<c:
-    print("найменше число:", b)
-else:
-    print("найменше число:", c)
+a = []
+n = int(input("введіть кількість елементів"))
+for i in range(n):
+    a.append(int(input('введіть число')))
+
+b=[]
+for j in range(n):
+
+    d=a.count(a[j])
+    b.append(d)
+
+c=[]
+for k in range(n):
+    if b[k]==1:
+        c.append(a[k])
+print(c)
+
