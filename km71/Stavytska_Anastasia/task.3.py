@@ -1,26 +1,25 @@
-def power(a, n):
-    if n==1:
-        b = a
+def u(a, b):
+    if a>0:
+        b.append(int(input('input element: ')))
+        u(a-1, b)
     else:
-        b = a*power(a,n-1)
-    return b
-
-
-while 1:
-    g = float(input("введіть число: "))
-    if g<=0:
-        print("введіть число більше 0")
-
+        return b
+def i(a, b_1, b_2 ):
+    if a>0:
+        b_2.append(b_1[a-1])
+        i(a-1, b_1, b_2)
     else:
-        break
+        return b_2
 
+d_in=[]
+d_out=[]
 
-while 1:
-    k = int(input("введіть показник: "))
-    if k<0:
-      print("введіть невід'ємне число")
-    else:
-      break
+k=int(input('Input N: '))
 
-l=power(g, k)
-print(l)
+u(k, d_in)
+print(d_in)
+
+i(k, d_in, d_out)
+print(d_out)
+
+input('Press enter')
