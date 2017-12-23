@@ -1,17 +1,26 @@
-a = []
-n = int(input("введіть кількість елементів"))
-for i in range(n):
-    a.append(int(input('введіть число')))
+def power(a, n):
+    if n==1:
+        b = a
+    else:
+        b = a*power(a,n-1)
+    return b
 
-b=[]
-for j in range(n):
 
-    d=a.count(a[j])
-    b.append(d)
+while 1:
+    g = float(input("введіть число: "))
+    if g<=0:
+        print("введіть число більше 0")
 
-c=[]
-for k in range(n):
-    if b[k]==1:
-        c.append(a[k])
-print(c)
+    else:
+        break
 
+
+while 1:
+    k = int(input("введіть показник: "))
+    if k<0:
+      print("введіть невід'ємне число")
+    else:
+      break
+
+l=power(g, k)
+print(l)
