@@ -1,12 +1,17 @@
-s1 = input('input x1: ')
-x1 = float (s1)
+def Max(list): #Знаходимо максимальний елемент
+    global a
+    if len(list) == 1:
+        a = list[0]
+    else:
+        a = max(int(Max(list[:-1])), int(list[-1]))
+    return a
 
-s2 = input('input x2: ')
-x2 = float (s2)
 
-s3 = input('input x3: ')
-x3 = float (s3)
+def secondMax(list):
+	Max(list)
+	list.remove(str(a)) #Видаляємо 1 максимальний елемент
+	Max(list) #Шукаємо 2 максимальний елемент
+	return(str(a))#Використовуємо str щоб не отримати у відповідь None
 
-y = x1 + x2 + x3
-print ('Sum - ' , y)
 
+print(secondMax(input("please write a list ").split()))

@@ -1,19 +1,12 @@
+def Max(list): #Знаходимо максимальний елемент
+    global a
+    if len(list) == 1:
+        a = list[0]
+    else:
+        a = max(int(Max(list[:-1])), int(list[-1]))
+    return a
 
- while(1):
-  x1 = float (input('Введіть довжину катета x1:'))
-  if x1<=0: print('введіть чісло більше 0')
-  else:
-      print('x1:' ,x1)
-      break
-
-while(2):
-  x2 = float (input('Введіть довжину катета x2:'))
-  if x2 <= 0: print('введіть чісло більше 0')
-  else:
-      print('x2:', x2)
-      break
-
-
-  y = (x1*x2/2)
-  print ( 'Площа - ', y)
-
+def count(list): #Друга функція для знаходження кількості максимальних ел.
+	Max(list)
+	return list.count(str(a)) #Знаходимо за допомогою .count()
+print(count(input("please write a list ").split())) 
